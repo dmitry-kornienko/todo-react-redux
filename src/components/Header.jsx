@@ -4,7 +4,7 @@ import '../style/App.css';
 export default function Header({ children }) {
   return (
     <div className='header'>
-        { children }
+      { children }
     </div>
   )
 }

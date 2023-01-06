@@ -6,14 +6,14 @@ const defaultState = {
     todos: [],
 };
 
-const todo = (state = defaultState, action) => {
+const todoReducer = (state = defaultState, action) => {
     switch(action.type) {
         case ADD_TODO:
             return {...state, todos: [...state.todos, action.payload]};
         case DELETE_TODO:
             return {...state, todos: state.todos.filter(todo => todo.id !== action.payload)};
         case DONE_TODO:
-            return {...state, todos: [...state.todos[action.payload].done = true]};
+            return {...state, todos: [...state.todos, state.todos[action.payload].done = true]};
         default:
             return state;
     }
@@ -31,4 +31,4 @@ export const doneTodo = (index) => ({
     type: DONE_TODO, payload: index,
 });
 
-export default todo;
+export default todoReducer;

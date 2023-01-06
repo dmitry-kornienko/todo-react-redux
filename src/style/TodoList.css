@@ -1,0 +1,11 @@
+.todoList {
+    margin: 10px auto;
+    padding: 10px 30px;
+    box-shadow: 0px 0px 4px rgba(0, 23, 71, 0.15);
+    border-radius: 8px;
+    font-size: 20px;
+    background: #fff;
+}
+.emptyTodos {
+    text-align: center;
+}

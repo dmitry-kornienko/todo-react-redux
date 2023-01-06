@@ -1,0 +1,30 @@
+.todoItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.deleteBtn {
+    background-color: rgb(206, 132, 132);
+    border: none;
+    border-radius: 5px;
+    padding: 0 7px;
+    color: #fff;
+}
+.isDone {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #bebebe;
+    border-radius: 6px;
+}
+.doned {
+    background-color: rgb(72, 182, 111);
+}
+.doneTodo {
+    text-decoration: line-through;
+    color: #bebebe;
+}
+.todoInfo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

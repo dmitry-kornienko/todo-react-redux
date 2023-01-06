@@ -6,11 +6,9 @@ import '../style/FormAddTodo.css';
 export default function FormAddTodo() {
     const dispatch = useDispatch();
     const [text, setText] = useState('');
-
     const handleSave = (e) => {
         setText(e.target.value);
     }
-    
     const addNewTodo = (e) => {
         e.preventDefault();
         const newTodo = {

@@ -10,7 +10,7 @@ export default function Navigation() {
     ]);
     const changeActive = (index) => {
         const newNavLinks = [...navLinks];
-        newNavLinks.forEach(link => link.active = false)
+        newNavLinks.forEach(link => link.active = false);
         setNavLinks(newNavLinks, newNavLinks[index].active = true);
     }
   return (

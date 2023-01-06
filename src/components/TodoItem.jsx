@@ -4,17 +4,13 @@ import { deleteTodo, doneTodo } from '../store/todoReducer';
 import '../style/TodoItem.css';
 
 export default function TodoItem({ todo, index }) {
-
     const dispatch = useDispatch();
-
     const removeTodo = (id) => {
         dispatch(deleteTodo(id));
     }
-
     const donedTodo = (index) => {
-        dispatch(doneTodo(index))
+        dispatch(doneTodo(index));
     }
-
   return (
     <div className='todoItem'>
         <div className='todoInfo'>

@@ -13,9 +13,14 @@ const todoReducer = (state = defaultState, action) => {
         case DELETE_TODO:
             return {...state, todos: state.todos.filter(todo => todo.id !== action.payload)};
         case DONE_TODO:
-            return {...state, todos: [...state.todos], ...state.todos[action.payload].done = !state.todos[action.payload].done};
+            return {...state,
+                todos: [...state.todos],
+                    ...state.todos
+                    .find(todo => todo.text === action.payload).done = !state.todos
+                    .find(todo => todo.text === action.payload).done
+                };
         default:
-            return state;
+           return state;
     }
 }
 
@@ -24,11 +29,11 @@ export const addTodo = (todo) => ({
 });
 
 export const deleteTodo = (id) => ({
-    type: DELETE_TODO, payload: id,
+    type: DELETE_TODO, payload: id
 });
 
-export const doneTodo = (index) => ({
-    type: DONE_TODO, payload: index,
+export const doneTodo = (text) => ({
+    type: DONE_TODO, payload: text,
 });
 
 export default todoReducer;

@@ -16,7 +16,7 @@ export default function App() {
       <Navigation />
       <Routes>
         <Route path='/' element={ <AllTodos /> } />
-        <Route path='/done' element={ <DoneTodos /> } />
+        <Route path='/completed' element={ <DoneTodos /> } />
         <Route path='/active' element={ <ActiveTodos /> } />
       </Routes>
     </div>

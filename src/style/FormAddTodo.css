@@ -15,7 +15,7 @@
     font-size: 16px;
 }
 .formAddTodo button {
-    padding: 5px 10px;
+
     width: 84px;
     background: #2D70FD;
     border: none;
@@ -28,4 +28,13 @@
     background-color: rgb(97, 211, 169);
     border: none;
     cursor: pointer;
+}
+.Link-to-all {
+    display: block;
+    padding: 5px 10px;
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+    height: 100%;
+    width: 100%;
 }

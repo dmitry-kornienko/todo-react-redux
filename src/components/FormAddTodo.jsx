@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { Link } from 'react-router-dom';
+import { useNavLinks } from '../context/NavLinksContext';
 import { addTodo } from '../store/todoReducer';
 import '../style/FormAddTodo.css';
 
 export default function FormAddTodo() {
     const dispatch = useDispatch();
     const [text, setText] = useState('');
+    const { changeActive } = useNavLinks();
     const handleSave = (e) => {
         setText(e.target.value);
     }
@@ -17,6 +20,7 @@ export default function FormAddTodo() {
             done: false,
         }
         dispatch(addTodo(newTodo));
+        changeActive(0);
         setText('');
     }
   return (
@@ -27,7 +31,9 @@ export default function FormAddTodo() {
             type="text"
             placeholder='Add New To Do'    
         />
-        <button onClick={addNewTodo}>Add</button>
+        <button onClick={addNewTodo}>
+            <Link to='/' className='Link-to-all'>Add</Link>
+        </button>
     </form>
   )
 }
